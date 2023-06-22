@@ -1,9 +1,11 @@
 import Navbar from '../components/navbar.jsx';
+import Cta from '../components/cta.jsx';
 
 function Home() {
   return (
-    <section>
+    <section class="bg-gray-900">
       <Navbar/>
+      <Cta/>
     </section>
         
   )
