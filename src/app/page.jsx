@@ -1,6 +1,7 @@
 import 'tailwindcss/tailwind.css';
 import Navbar from '../components/navbar.jsx';
 import Cta from '../components/cta.jsx';
+import Footer from '../components/footer.jsx';
 
 function Home() {
   return (
@@ -11,6 +12,7 @@ function Home() {
         <Cta />
 
       </div>
+      <Footer />
       
 
     </section>
