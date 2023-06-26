@@ -1,3 +1,6 @@
+import Link from 'next/link';
+import Image from 'next/image'
+
 export default function Footer() {
     return (
         <div class="bg-blue-700 rounded-t-3xl">
