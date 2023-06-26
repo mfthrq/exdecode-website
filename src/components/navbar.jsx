@@ -1,6 +1,8 @@
 "use client";
 import 'tailwindcss/tailwind.css';
 import { useEffect, useState } from 'react';
+import Link from 'next/link';
+import Image from 'next/image'
 
 export default function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -27,10 +29,10 @@ export default function Navbar() {
 
     return (
         <div className="bg-blue-700 fixed h-24 w-full z-20 top-0 left-0 rounded-b-3xl shadow-lg shadow-indigo-500/40">
-            <div className="mt-2 max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-                <a href="/" className="flex items-center ml-8">
-                    <img src={"logo-exdecode.png"} className="h-12" alt="Exdecode Logo" />
-                </a>
+            <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+                <Link href="/" className="flex items-center ml-8">
+                    <Image src={"/logo-exdecode.png"} width={60} height={60} alt="Exdecode Logo" />
+                </Link>
                 <div className="flex md:order-2 mr-8">
                     <button
                         onClick={toggleMenu}
@@ -76,14 +78,6 @@ export default function Navbar() {
                                 className="block text-xl py-2 pl-3 pr-4 text-white rounded md:bg-transparent md:text-white-300 md:p-0 md:dark:text-white-300 hover:text-gray-200"
                             >
                                 About
-                            </a>
-                        </li>
-                        <li>
-                            <a
-                                href="/services"
-                                className="block text-xl py-2 pl-3 pr-4 text-white rounded md:bg-transparent md:text-white-300 md:p-0 md:dark:text-white-300 hover:text-gray-200"
-                            >
-                                Services
                             </a>
                         </li>
                         <li>

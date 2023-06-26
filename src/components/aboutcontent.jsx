@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { Link } from "react-scroll";
+import Image from 'next/image'
 
 export default function AboutContent() {
     const controls = useAnimation();
@@ -61,10 +62,10 @@ export default function AboutContent() {
     };
 
     return (
-        <div className="bg-gray-900">
+        <div className="bg-gray-900 mb-12">
             <div
                 id="about-content"
-                className="gap-16 items-center px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-12 lg:px-6"
+                className="content-center gap-16 items-center px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-12 lg:px-6"
             >
                 <div className="font-light text-white sm:text-lg py-12">
                     <motion.h2
@@ -80,7 +81,7 @@ export default function AboutContent() {
                         animate={controls}
                         variants={paragraphVariants}
                         align="justify"
-                        className="text-justify"
+                        className="mt-12 text-justify"
                     >
                         Exdecode is
                         <span className="font-bold"> a community focused on software development and information technology. </span>
@@ -94,22 +95,16 @@ export default function AboutContent() {
                         its members.
                     </motion.p>
                 </div>
-                <div className="grid grid-cols-2 gap-4 lg:mt-8">
-                    <motion.img
-                        initial="hidden"
-                        animate={controls}
-                        variants={imageVariants}
-                        className="w-full rounded-lg"
-                        src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-long-2.png"
-                        alt="office content 1"
-                    />
-                    <motion.img
-                        initial="hidden"
-                        animate={controls}
-                        variants={imageVariants}
-                        className="mt-4 w-full lg:mt-10 rounded-lg"
-                        src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-long-1.png"
-                        alt="office content 2"
+                <div className="lg:mt-0 -mt-12 flex justify-center items-center py-12">
+                    <Image
+                        // initial="hidden"
+                        // animate={controls}
+                        // variants={imageVariants}
+                        width={350}
+                        height={350}
+                        className="rounded-lg"
+                        src={"/logoexdecode.png"}
+                        alt="Exdecode Logo"
                     />
                 </div>
             </div>

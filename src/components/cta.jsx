@@ -22,7 +22,7 @@ export default function Cta() {
             options={{
               autoStart: true,
               loop: true,
-              delay: 60,
+              delay: 90,
               strings: [
                 "Innovate!",
                 "Inspire!",
