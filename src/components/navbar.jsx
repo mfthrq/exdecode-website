@@ -64,29 +64,29 @@ export default function Navbar() {
                 >
                     <ul className="bg-blue-700 flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg md:flex-row md:space-x-12 md:mt-0 md:border-0">
                         <li>
-                            <a
-                                href="/"
+                            <Link
+                                href={"/"}
                                 className="block text-xl py-2 pl-3 pr-4 text-white rounded md:bg-transparent md:text-white-300 md:p-0 md:dark:text-white-300 hover:text-gray-200"
                                 aria-current="page"
                             >
                                 Home
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a
-                                href="/about"
+                            <Link
+                                href={"/about"}
                                 className="block text-xl py-2 pl-3 pr-4 text-white rounded md:bg-transparent md:text-white-300 md:p-0 md:dark:text-white-300 hover:text-gray-200"
                             >
                                 About
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a
-                                href="/contact"
+                            <Link
+                                href={"/contact"}
                                 className="block text-xl py-2 pl-3 pr-4 text-white rounded md:bg-transparent md:text-white-300 md:p-0 md:dark:text-white-300 hover:text-gray-200"
                             >
                                 Contact
-                            </a>
+                            </Link>
                         </li>
                     </ul>
                 </div>
