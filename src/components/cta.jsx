@@ -26,7 +26,8 @@ export default function Cta() {
               strings: [
                 "Innovate!",
                 "Inspire!",
-                "Improve!"
+                "Improve!",
+                "Are Excodian!"
               ],
             }}
           />
