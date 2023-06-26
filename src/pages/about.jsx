@@ -4,7 +4,7 @@ import Navbar from '@/components/navbar.jsx';
 import AboutHeader from '@/components/aboutheader.jsx';
 import AboutContent from '@/components/aboutcontent.jsx';
 import Footer from '@/components/footer.jsx';
-import Link from 'next/link';
+
 
 function About() {
     return (
