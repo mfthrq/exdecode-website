@@ -55,7 +55,7 @@ export default function Contact() {
                     initial={{ opacity: 0, y: -80 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1 }}>
-                    <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">Contact Us</h2>
+                    <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center text-white">Contact Us</h2>
                     <p class="mb-16 text-center text-white sm:text-xl text-justify">Got a problem on the server? Want to give feedback about the server? Or want to ask about our community partnership? Let us know!</p>
                 </motion.div>
 
