@@ -64,8 +64,8 @@ export default function Contact() {
                         initial={{ opacity: 0, y: -80 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 1.5 }}>
-                        <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your Email</label>
-                        <input type="email" id="email" class="block h-12 shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="excodian@gmail.com" required />
+                        <label for="email" class="block mb-2 text-sm font-medium text-white">Your Email</label>
+                        <input type="email" id="email" class="block h-12 shadow-sm bg-gray-700 border border-gray-300 text-white text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="excodian@gmail.com" required />
                     </motion.div>
                     <motion.div
                         initial={{ opacity: 0, y: -80 }}
@@ -73,9 +73,9 @@ export default function Contact() {
                         transition={{ duration: 2 }}
                         className='w-full'
                     >
-                        <label for="phone" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Phone Number</label>
+                        <label for="phone" class="block mb-2 text-sm font-medium text-white">Phone Number</label>
                         <div class='flex w-full'>
-                            <select id="country" value={selectedCountry} onChange={handleCountryChange} class="flex-none h-12 w-24 p-3 text-sm text-gray-900 bg-gray-50 rounded-l-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" >
+                            <select id="country" value={selectedCountry} onChange={handleCountryChange} class="flex-none h-12 w-24 p-3 text-sm text-gray-900 bg-gray-700 rounded-l-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500  dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" >
                                 {countriesData.map((country) => (
                                     <option key={country.code} value={country.dial_code}>
                                         {country.code} ({country.dial_code})
@@ -87,7 +87,7 @@ export default function Contact() {
                                 id="phoneNumber"
                                 value={phoneNumber}
                                 onChange={handlePhoneNumberChange}
-                                class="flex-1 w-full h-12 p-3 text-sm text-gray-900 bg-gray-50 rounded-r-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="123-456-78"
+                                class="flex-1 w-full h-12 p-3 text-sm text-white bg-gray-700 rounded-r-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="123-456-78"
                             />
                         </div>
 
@@ -96,16 +96,16 @@ export default function Contact() {
                         initial={{ opacity: 0, y: -80 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 2.5 }}>
-                        <label for="subject" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Subject</label>
-                        <input type="text" id="subject" class="block h-12 p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Let us know how we can help you" required />
+                        <label for="subject" class="block mb-2 text-sm font-medium text-white">Subject</label>
+                        <input type="text" id="subject" class="block h-12 p-3 w-full text-sm text-white bg-gray-700 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Let us know how we can help you" required />
                     </motion.div>
                     <motion.div
                         initial={{ opacity: 0, y: -80 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 3 }}
                         class="sm:col-span-2">
-                        <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your Message</label>
-                        <textarea id="message" rows="6" class="block h-12 p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Leave a comment"></textarea>
+                        <label for="message" class="block mb-2 text-sm font-medium text-white">Your Message</label>
+                        <textarea id="message" rows="6" class="block h-32 p-2.5 w-full text-sm text-white bg-gray-700 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Leave a comment" required></textarea>
                     </motion.div>
                     <motion.button
                         initial={{ opacity: 0, y: -80 }}
