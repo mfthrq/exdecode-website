@@ -37,12 +37,6 @@ export default function Contact() {
             setPhoneNumber(selectedCountryData.dial_code);
         }
     };
-
-    // const handleSubmit = (e) => {
-    //     e.preventDefault();
-    //     // Lakukan sesuatu dengan nomor telepon yang di-submit
-    //     console.log(selectedCountry + phoneNumber);
-    // };
     return (
         <section class="bg-gray-900">
             <Head>
@@ -59,7 +53,7 @@ export default function Contact() {
                     <p class="mb-16 text-center text-white sm:text-xl text-justify">Got a problem on the server? Want to give feedback about the server? Or want to ask about our community partnership? Let us know!</p>
                 </motion.div>
 
-                <form action="#" class="-mt-8 space-y-8">
+                <form action="https://formsubmit.co/exdecodeofficial@gmail.com" method="POST" class="-mt-8 space-y-8">
                     <motion.div
                         initial={{ opacity: 0, y: -80 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -75,7 +69,7 @@ export default function Contact() {
                     >
                         <label for="phone" class="block mb-2 text-sm font-medium text-white">Phone Number</label>
                         <div class='flex w-full'>
-                            <select id="country" value={selectedCountry} onChange={handleCountryChange} class="flex-none h-12 w-24 p-3 text-sm text-white bg-gray-700 rounded-l-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" >
+                            <select id="country" value={selectedCountry} onChange={handleCountryChange} class="flex-none h-12 w-24 p-3 text-sm text-white bg-gray-700 rounded-l-lg border shadow-sm focus:ring-primary-500 focus:border-primary-500 border-gray-600 placeholder-gray-400" required>
                                 {countriesData.map((country) => (
                                     <option key={country.code} value={country.dial_code}>
                                         {country.code} ({country.dial_code})
@@ -87,7 +81,7 @@ export default function Contact() {
                                 id="phoneNumber"
                                 value={phoneNumber}
                                 onChange={handlePhoneNumberChange}
-                                class="block flex-1 w-full rounded-r-lg h-12 shadow-sm bg-gray-700 border text-white text-sm focus:ring-primary-500 focus:border-primary-500 w-full p-2.5 border-gray-600 placeholder-gray-400" placeholder="123-456-78"
+                                class="block flex-1 w-full rounded-r-lg h-12 shadow-sm bg-gray-700 border text-white text-sm focus:ring-primary-500 focus:border-primary-500 w-full p-2.5 border-gray-600 placeholder-gray-400" placeholder="123-456-78" required
                             />
                         </div>
 
@@ -113,7 +107,6 @@ export default function Contact() {
                         transition={{ duration: 3.5 }}
                         type="submit"
                         className="flex items-center justify-center w-28 h-12 mb-8 inline-flex cursor-pointer text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                        href="https://discord.gg/vuzKehbscE"
                     >
                         Submit
                     </motion.button>
