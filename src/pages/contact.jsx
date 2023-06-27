@@ -1,6 +1,3 @@
-"use client";
-
-import React from 'react';
 import 'tailwindcss/tailwind.css';
 import Navbar from '@/components/navbar';
 import Footer from '@/components/footer';
@@ -15,10 +12,6 @@ export default function Contact() {
     const [phoneNumber, setPhoneNumber] = useState('');
     const [selectedCountry, setSelectedCountry] = useState('');
     const [countries, setCountries] = useState([]);
-
-    if (state.succeeded) {
-        return <p>Thanks for joining!</p>;
-    }
 
     useEffect(() => {
         // Mengatur data negara dari JSON ke dalam state countries
@@ -44,40 +37,61 @@ export default function Contact() {
             setPhoneNumber(selectedCountryData.dial_code);
         }
     };
+
+    if (state.succeeded) {
+        return (
+            <p>Thanks for joining!</p>
+        );
+    }
+
     return (
-        <section class="bg-gray-900">
+        <section className="bg-gray-900">
             <Head>
                 <link rel="icon" href="/logo-exdecode-bgblue.png" />
                 <title>Contact</title>
             </Head>
             <Navbar />
-            <div class="py-36 px-4 mx-auto max-w-screen-md">
+            <div className="py-36 px-4 mx-auto max-w-screen-md">
                 <motion.div
                     initial={{ opacity: 0, y: -80 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 1 }}>
-                    <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center text-white">Contact Us</h2>
-                    <p class="mb-16 text-center text-white sm:text-xl text-justify">Got a problem on the server? Want to give feedback about the server? Or want to ask about our community partnership? Let us know!</p>
+                    transition={{ duration: 1 }}
+                >
+                    <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-white">Contact Us</h2>
+                    <p className="mb-16 text-center text-white sm:text-xl text-justify">Got a problem on the server? Want to give feedback about the server? Or want to ask about our community partnership? Let us know!</p>
                 </motion.div>
 
-                <form action="https://formspree.io/f/mpzgarqy"
-                    method="POST" class="-mt-8 space-y-8">
+                <form action="https://formspree.io/f/mpzgarqy" method="POST" className="-mt-8 space-y-8">
                     <motion.div
                         initial={{ opacity: 0, y: -80 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 1.5 }}>
-                        <label htmlFor="email" class="block mb-2 text-sm font-medium text-white">Your Email</label>
-                        <input name="email" type="email" id="email" class="block h-12 shadow-sm bg-gray-700 border text-white text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 border-gray-600 placeholder-gray-400" placeholder="excodian@gmail.com" required />
+                        transition={{ duration: 1.5 }}
+                    >
+                        <label htmlFor="email" className="block mb-2 text-sm font-medium text-white">Your Email</label>
+                        <input
+                            name="email"
+                            type="email"
+                            id="email"
+                            className="block h-12 shadow-sm bg-gray-700 border text-white text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 border-gray-600 placeholder-gray-400"
+                            placeholder="excodian@gmail.com"
+                            required
+                        />
                     </motion.div>
                     <motion.div
                         initial={{ opacity: 0, y: -80 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 2 }}
-                        className='w-full'
+                        className="w-full"
                     >
-                        <label htmlFor="phone" class="block mb-2 text-sm font-medium text-white">Phone Number</label>
-                        <div class='flex w-full'>
-                            <select id="country" value={selectedCountry} onChange={handleCountryChange} class="flex-none h-12 w-24 p-3 text-sm text-white bg-gray-700 rounded-l-lg border shadow-sm focus:ring-primary-500 focus:border-primary-500 border-gray-600 placeholder-gray-400" required>
+                        <label htmlFor="phone" className="block mb-2 text-sm font-medium text-white">Phone Number</label>
+                        <div className="flex w-full">
+                            <select
+                                id="country"
+                                value={selectedCountry}
+                                onChange={handleCountryChange}
+                                className="flex-none h-12 w-24 p-3 text-sm text-white bg-gray-700 rounded-l-lg border shadow-sm focus:ring-primary-500 focus:border-primary-500 border-gray-600 placeholder-gray-400"
+                                required
+                            >
                                 {countriesData.map((country) => (
                                     <option key={country.code} value={country.dial_code}>
                                         {country.code} ({country.dial_code})
@@ -90,25 +104,42 @@ export default function Contact() {
                                 name="phoneNumber"
                                 value={phoneNumber}
                                 onChange={handlePhoneNumberChange}
-                                class="block flex-1 w-full rounded-r-lg h-12 shadow-sm bg-gray-700 border text-white text-sm focus:ring-primary-500 focus:border-primary-500 w-full p-2.5 border-gray-600 placeholder-gray-400" placeholder="123-456-78" required
+                                className="block flex-1 w-full rounded-r-lg h-12 shadow-sm bg-gray-700 border text-white text-sm focus:ring-primary-500 focus:border-primary-500 w-full p-2.5 border-gray-600 placeholder-gray-400"
+                                placeholder="123-456-78"
+                                required
                             />
                         </div>
-
                     </motion.div>
                     <motion.div
                         initial={{ opacity: 0, y: -80 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 2.5 }}>
-                        <label htmlFor="subject" class="block mb-2 text-sm font-medium text-white">Subject</label>
-                        <input name="subject" type="text" id="subject" class="block h-12 shadow-sm bg-gray-700 border text-white text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 border-gray-600 placeholder-gray-400" placeholder="Let us know how we can help you" required />
+                        transition={{ duration: 2.5 }}
+                    >
+                        <label htmlFor="subject" className="block mb-2 text-sm font-medium text-white">Subject</label>
+                        <input
+                            name="subject"
+                            type="text"
+                            id="subject"
+                            className="block h-12 shadow-sm bg-gray-700 border text-white text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 border-gray-600 placeholder-gray-400"
+                            placeholder="Let us know how we can help you"
+                            required
+                        />
                     </motion.div>
                     <motion.div
                         initial={{ opacity: 0, y: -80 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 3 }}
-                        class="sm:col-span-2">
-                        <label htmlFor="message" class="block mb-2 text-sm font-medium text-white">Your Message</label>
-                        <textarea name="message" id="message" rows="6" class="block h-32 shadow-sm bg-gray-700 border text-white text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 border-gray-600 placeholder-gray-400" placeholder="Leave a comment" required></textarea>
+                        className="sm:col-span-2"
+                    >
+                        <label htmlFor="message" className="block mb-2 text-sm font-medium text-white">Your Message</label>
+                        <textarea
+                            name="message"
+                            id="message"
+                            rows="6"
+                            className="block h-32 shadow-sm bg-gray-700 border text-white text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 border-gray-600 placeholder-gray-400"
+                            placeholder="Leave a comment"
+                            required
+                        ></textarea>
                     </motion.div>
                     <motion.button
                         initial={{ opacity: 0, y: -80 }}
@@ -124,6 +155,5 @@ export default function Contact() {
             </div>
             <Footer />
         </section>
-
-    )
+    );
 }
