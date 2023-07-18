@@ -81,7 +81,7 @@ export default function AboutContent() {
                         animate={controls}
                         variants={paragraphVariants}
                         align="justify"
-                        className="mt-12 text-justify"
+                        className="mt-12 text-justify text-gray-300 font-normal"
                     >
                         Exdecode is
                         <span className="font-bold"> a community focused on software development and information technology. </span>

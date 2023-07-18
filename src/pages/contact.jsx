@@ -58,7 +58,7 @@ export default function Contact() {
                     transition={{ duration: 1 }}
                 >
                     <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-white">Contact Us</h2>
-                    <p className="mb-16 text-center text-white sm:text-xl text-justify">Got a problem on the server? Want to give feedback about the server? Or want to ask about our community partnership? Let us know!</p>
+                    <p className="mb-16 text-center font-normal text-gray-300 sm:text-xl text-justify">Got a problem on the server? Want to give feedback about the server? Or want to ask about our community partnership? Let us know!</p>
                 </motion.div>
 
                 <form action="https://formspree.io/f/mpzgarqy" method="POST" className="-mt-8 space-y-8">

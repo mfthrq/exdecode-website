@@ -5,18 +5,18 @@ import Typewriter from "typewriter-effect";
 
 export default function Cta() {
   return (
-    <div className="items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6">
+    <div className="grid grid-cols-2 items-center py-8 px-4 mx-auto xl:gap-8 sm:py-16 lg:px-8">
       <motion.iframe
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="xl:ml-32 md:ml-24 mt-20" src="https://discord.com/widget?id=1104032452781027349&theme=dark" width="350" height="450" allowtransparency="true" frameBorder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></motion.iframe>
-      <div className="xl:mt-4 -mt-12">
+        className="col-span-2 md:col-span-1 lg:col-span-1 mx-auto my-20 w-[310px] h-[500px]" src="https://discord.com/widget?id=1104032452781027349&theme=dark" allowtransparency="true" frameBorder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></motion.iframe>
+      <div className="col-span-2 md:col-span-1 lg:col-span-1">
         <motion.h1
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
-          className="mt-24 mb-8 md:text-5xl xl:text-5xl text-4xl font-extrabold text-white dark:text-white"
+          className="mb-8 md:text-5xl xl:text-5xl text-4xl font-extrabold text-white dark:text-white"
         > Together We
           <Typewriter
             options={{
@@ -36,7 +36,7 @@ export default function Cta() {
           initial={{ opacity: 0, x: 30 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
-          className="mb-6 mb-8 font-light text-gray-300 md:text-lg dark:text-gray-400" align="justify">
+          className="mb-6 mb-8 font-normal text-gray-300 md:text-lg dark:text-gray-400" align="justify">
           Invite visitors to start their adventure in the world of IT by joining the Exdecode community.
         </motion.p>
 
