@@ -1,16 +1,14 @@
-"use client";
-
 import { motion } from "framer-motion";
 import Typewriter from "typewriter-effect";
 
 export default function Cta() {
   return (
-    <div className="grid grid-cols-2 items-center py-8 px-4 mx-auto xl:gap-8 sm:py-16 lg:px-8">
+    <div className="grid grid-cols-2 items-center py-8 px-4 mx-auto sm:py-16 lg:px-8">
       <motion.iframe
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="col-span-2 md:col-span-1 lg:col-span-1 mx-auto my-20 w-[310px] h-[500px]" src="https://discord.com/widget?id=1104032452781027349&theme=dark" allowtransparency="true" frameBorder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></motion.iframe>
+        className="col-span-2 md:col-span-1 lg:col-span-1 mx-auto mt-28 mb-12 md:my-20 lg:my-20 w-[310px] h-[500px]" src="https://discord.com/widget?id=1104032452781027349&theme=dark" allowtransparency="true" frameBorder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></motion.iframe>
       <div className="col-span-2 md:col-span-1 lg:col-span-1">
         <motion.h1
           initial={{ opacity: 0, x: -50 }}

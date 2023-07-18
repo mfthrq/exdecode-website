@@ -35,7 +35,7 @@ export default function FooterContent() {
                     </a>
                 </div>
                 <p class="font-medium leading-6 text-center text-white">
-                    Copyright &copy; 2023 - All right reserved.
+                    Copyright &copy; 2023 - All rights reserved.
                 </p>
             </div>
         </div>

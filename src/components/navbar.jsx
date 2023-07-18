@@ -1,4 +1,3 @@
-"use client";
 import 'tailwindcss/tailwind.css';
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
