@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
-import { Link } from "react-scroll";
 import Image from 'next/image'
 
 export default function AboutContent() {
@@ -95,7 +94,12 @@ export default function AboutContent() {
                         its members.
                     </motion.p>
                 </div>
-                <div className="lg:mt-0 -mt-12 flex justify-center items-center py-12">
+                <motion.div
+                    className="lg:mt-0 -mt-12 flex justify-center items-center py-12"
+                    initial="hidden"
+                    animate={controls}
+                    variants={paragraphVariants}
+                    align="justify">
                     <Image
                         // initial="hidden"
                         // animate={controls}
@@ -106,7 +110,7 @@ export default function AboutContent() {
                         src={"/logoexdecode.png"}
                         alt="Exdecode Logo"
                     />
-                </div>
+                </motion.div>
             </div>
         </div>
     );
